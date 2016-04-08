@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="ermsApp">
+<head>
+<!-- <link REL="SHORTCUT ICON" HREF="images/favicon.png">
+ --><!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!-- build:css(.) styles/vendor.css -->
+<!-- bower:css -->
+<link rel="stylesheet"
+	href="components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+<link rel="stylesheet" type="text/css" href="styles/app.css"/>
+</head>
+
+<body ng-app="ermsApp">
+
+ <div ng-include="'scripts/common/partials/navbar-top.html'"></div>
+
+
+  <div ng-include="'scripts/common/partials/navbar-bottom.html'"></div>
+
+
+<!-- 	<script src="//code.jquery.com/jquery-2.0.3.min.js"></script> -->
+	<script type="text/javascript" src="components/angular/angular.js"></script>
+	<script type="text/javascript"
+		src="components/angular-route/angular-route.js"></script>
+
+	<script src="scripts/app.js"></script>
+	<script src="scripts/common/controllers/homeCtrl.js"></script>
+	<script src="scripts/common/controllers/loginCtrl.js"></script>
+	<!-- <script src="scripts/services/services.js"></script>
+	<script src="scripts/controllers/controllers.js"></script> -->
+</body>
+</html>

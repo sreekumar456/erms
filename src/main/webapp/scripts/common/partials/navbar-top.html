@@ -1,0 +1,62 @@
+<div ng-controller="LoginController" ng-enter="login()">
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="navbar-header">
+        <a class="navbar-brand erms-icon" href="#"><img src="images/hr.jpg" /></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+    </div>
+
+			<div class="titleHeader">
+			<h1 id="title">ERMS</h1>
+			</div>
+    <div id="top-nav" class="navbar-collapse collapse">
+        <div class="nav navbar-form pull-right">		
+            <div class="loginBtnDiv" ng-show="!authService.isLoggedIn()">
+
+                <a id="loginLink" href="#loginModal" role="button" class="btn loginBtnStyle" data-toggle="modal">
+                    <i class="glyphicon glyphicon-user glyphicon-white"></i> Sign in</a>
+            </div>
+            <div class="loginBtnDiv" ng-show="authService.isLoggedIn()">
+
+			<!-- <div class="welcome-text">Welcome {{loginInput}}!</div>
+				<a  ng-show="isResetLinkVisible()" class="reset-link" ng-click="resetSimulationLock()">
+                    <i class="glyphicon glyphicon-alert"></i> Reset Simulator Lock
+                </a>
+                <a class="home-link" ng-click="redirectToSimulator()">
+                    <i class="glyphicon glyphicon-home"></i> Home
+                </a>
+                <a class="btn loginBtnStyle" ng-click="authService.logout()">
+                    <i class="glyphicon  glyphicon-white"></i> Sign out</a>
+            </div> -->
+        </div>
+
+    </div>
+</nav>
+<div class="modal fade" id="loginModal" fade-in>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-header-color">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 class="modal-title modal-title-font">Login</h4>
+
+            </div>
+            <div class="modal-body">
+                <span id="login-email">Username</span>
+                <input ng-model="loginInput" type="text" autofocus placeholder="Username" name='username'>
+                <span id="login-password">Password</span>
+                <input ng-model="passwordInput" type="password" placeholder="Password" name='password'>
+                <a href="#">Forgot password?</a>
+            </div>
+            <div class="modal-footer">
+                <a class="btn loginBtnStyle" ng-click="login()">
+                    <i
+                            class="glyphicon glyphicon-user glyphicon-white"></i> Log in</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
