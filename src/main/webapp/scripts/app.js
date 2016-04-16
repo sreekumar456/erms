@@ -1,7 +1,7 @@
 
 
-/*angular.module('Authentication', []);
-angular.module('Home', []);*/
+angular.module('Authentication', []);
+angular.module('Home', []);
 
 var mainApp = angular.module("ermsApp", [   
   'ermsApp.controllers', // custom controllers
