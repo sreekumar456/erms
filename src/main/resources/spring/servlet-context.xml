@@ -34,6 +34,7 @@
 	<mvc:resources mapping="/views/**" location="/views/" />
 	<mvc:resources mapping="/services/**" location="/services/" />
 	<mvc:resources mapping="/controllers/**" location="/controllers/" />
+	<mvc:resources mapping="/services/**" location="/services/" />
 	<mvc:resources mapping="/images/**" location="/images/" />
 	<mvc:annotation-driven />
 </beans>

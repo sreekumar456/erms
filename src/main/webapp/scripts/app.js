@@ -7,6 +7,7 @@ var mainApp = angular.module("ermsApp", [
   'ermsApp.controllers', // custom controllers
   'ermsApp.services', // custom services
   'ngRoute',
+  'ngCookies',
   'Authentication',
    'Home' 
 ]);
@@ -14,7 +15,7 @@ var mainApp = angular.module("ermsApp", [
 var controllers = angular.module('ermsApp.controllers', []);
 var services = angular.module('ermsApp.services', []);
 
-mainApp.config([ '$routeProvider', function($routeProvider) {
+mainApp.config([ '$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
 	  $routeProvider
       .when('/login', {
           controller: 'LoginController',
@@ -36,7 +37,7 @@ mainApp.config([ '$routeProvider', function($routeProvider) {
 
 }]);
 
-ermsApp.run(['$rootScope', '$location', '$cookieStore', '$http',
+mainApp.run(['$rootScope', '$location', '$cookieStore', '$http',
   function ($rootScope, $location, $cookieStore, $http) {
    // keep user logged in after page refresh
         $rootScope.globals = $cookieStore.get('globals') || {};

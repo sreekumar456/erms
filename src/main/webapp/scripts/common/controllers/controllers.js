@@ -26,12 +26,12 @@ angular.module('Authentication').controller(
 									}
 								});
 					};
-				} ]);
+				}]);
 
-angular.module('Home').controller(
+/*angular.module('Home').controller(
 		'HomeController', 
 		[ 
 		  '$scope', 
 		  function($scope) {
 
-}]);
+}]);*/
