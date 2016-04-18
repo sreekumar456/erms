@@ -25,13 +25,18 @@ mainApp.config([ '$routeProvider', function($routeProvider) {
           controller: 'HomeController',
           templateUrl: 'views/home.html'
       })
+      .when('/register', {
+           controller: 'RegisterController',
+           templateUrl: 'views/register.html',
+           controllerAs: 'vm'
+      })
       .otherwise({ 
     	  redirectTo: '/login'
     	});
 
 }]);
 
-travissApp.run(['$rootScope', '$location', '$cookieStore', '$http',
+ermsApp.run(['$rootScope', '$location', '$cookieStore', '$http',
   function ($rootScope, $location, $cookieStore, $http) {
    // keep user logged in after page refresh
         $rootScope.globals = $cookieStore.get('globals') || {};
