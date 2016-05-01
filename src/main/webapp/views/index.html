@@ -15,6 +15,12 @@
 <body>
 
  <div ng-include="'scripts/common/partials/navbar-top.html'"></div>
+ 
+  <div class="container">
+
+    <!-- ng routes hook -->
+    <div ng-view class="mainSection"></div>
+  </div>
   <div ng-include="'scripts/common/partials/navbar-bottom.html'"></div>
 
 
