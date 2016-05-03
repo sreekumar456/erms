@@ -21,8 +21,9 @@ a {
      position: absolute;
     /* height: 10px; */
     left: 43%;
+    top: -12%;
     bottom: 10%;
-    color: cornflowerblue;
+    color: lightskyblue;
 }
 /* body{
   background: #00589F;
