@@ -22,11 +22,11 @@ ermsApp.config([ '$routeProvider','$locationProvider', function($routeProvider,$
           templateUrl: 'views/login.html',
           controllerAs: 'vm'          
       })
-      /*.when('/', {
+      .when('/', {
           controller: 'HomeController',
           templateUrl: 'views/home.html',
           controllerAs: 'vm' 
-      })*/
+      })
       .when('/register', {
            controller: 'RegisterController',
            templateUrl: 'views/register.html',
